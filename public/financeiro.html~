@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Paciente - Financeiro</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef1f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            color: #0056b3;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .card-invoice {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+        }
+        .card-invoice.paid {
+            background-color: #e8f5e9;
+            border-color: #c8e6c9;
+        }
+        .card-invoice .info {
+            flex-grow: 1;
+            text-align: left;
+        }
+        .card-invoice .status {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .status.open {
+            color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .status.paid {
+            color: #28a745;
+            background-color: #d4edda;
+        }
+        .card-invoice .actions button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .card-invoice .actions .btn-boleto {
+            background-color: #17a2b8;
+            color: white;
+        }
+        .card-invoice .actions .btn-pix {
+            background-color: #28a745;
+            color: white;
+        }
+        .card-invoice .actions .btn-card {
+            background-color: #007bff;
+            color: white;
+        }
+        .payment-options {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .payment-options button {
+            padding: 12px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .payment-options .btn-boleto {
+            background-color: #17a2b8;
+        }
+        .payment-options .btn-boleto:hover {
+            background-color: #117a8b;
+        }
+        .payment-options .btn-pix {
+            background-color: #28a745;
+        }
+        .payment-options .btn-pix:hover {
+            background-color: #218838;
+        }
+        .payment-options .btn-card {
+            background-color: #007bff;
+        }
+        .payment-options .btn-card:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Área do Paciente</h1>
+        <p>Olá, [Nome do Paciente]!</p>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Minhas Faturas</h2>
+
+        <div class="card-invoice">
+            <div class="info">
+                <strong>Plano de Tratamento</strong>
+                <br>
+                <span>Vencimento: 30/08/2025</span>
+                <br>
+                <span>Valor: R$ 350,00</span>
+            </div>
+            <span class="status open">Em Aberto</span>
+            <div class="actions">
+                <button class="btn-boleto">Boleto</button>
+                <button class="btn-pix">Pix</button>
+                <button class="btn-card">Cartão</button>
+            </div>
+        </div>
+
+        <div class="card-invoice paid">
+            <div class="info">
+                <strong>Limpeza e Clareamento</strong>
+                <br>
+                <span>Pago em: 20/07/2025</span>
+                <br>
+                <span>Valor: R$ 800,00</span>
+            </div>
+            <span class="status paid">Pago</span>
+        </div>
+
+        <div class="payment-options">
+            <p>Selecione a forma de pagamento desejada para a fatura em aberto.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

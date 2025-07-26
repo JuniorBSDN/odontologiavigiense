@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Financeiro - Clínica Odontológica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+        .card p {
+            font-size: 2.5em;
+            margin: 10px 0 0;
+            font-weight: bold;
+        }
+        .card.income p {
+            color: #28a745;
+        }
+        .card.expenses p {
+            color: #dc3545;
+        }
+        .card.balance p {
+            color: #17a2b8;
+        }
+        .table-section {
+            grid-column: 1 / -1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .table-section h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #f2f2f2;
+            color: #555;
+            font-weight: bold;
+        }
+        .data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Dashboard Financeiro</h1>
+        <p>Clínica Odontológica Smile Care</p>
+    </div>
+
+    <div class="container">
+
+        <div class="card income">
+            <h3>Receita Total</h3>
+            <p>R$ 15.500,00</p>
+        </div>
+
+        <div class="card expenses">
+            <h3>Despesa Total</h3>
+            <p>R$ 8.200,00</p>
+        </div>
+
+        <div class="card balance">
+            <h3>Saldo Atual</h3>
+            <p>R$ 7.300,00</p>
+        </div>
+
+        <div class="table-section">
+            <h2>Transações Recentes</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Tipo</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>25/07/2025</td>
+                        <td>Consulta e Limpeza (João Silva)</td>
+                        <td>Receita</td>
+                        <td>R$ 250,00</td>
+                    </tr>
+                    <tr>
+                        <td>24/07/2025</td>
+                        <td>Pagamento de Salário (Dra. Ana)</td>
+                        <td>Despesa</td>
+                        <td>R$ 4.500,00</td>
+                    </tr>
+                    <tr>
+                        <td>24/07/2025</td>
+                        <td>Tratamento de Canal (Maria Souza)</td>
+                        <td>Receita</td>
+                        <td>R$ 1.200,00</td>
+                    </tr>
+                    <tr>
+                        <td>23/07/2025</td>
+                        <td>Compra de Materiais (Luvas, Brocas)</td>
+                        <td>Despesa</td>
+                        <td>R$ 350,00</td>
+                    </tr>
+                    <tr>
+                        <td>23/07/2025</td>
+                        <td>Clareamento Dental (Carlos Pereira)</td>
+                        <td>Receita</td>
+                        <td>R$ 800,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
